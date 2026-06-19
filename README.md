@@ -230,6 +230,6 @@ Persistence:     JSON session state, JSONL observability logs
 
 ## Author
 
-**Pavan Kumar Agnihotri**
+**Pavan Keshav Agnihotri**
 MS Computer Science, University of Alabama at Birmingham
-[GitHub](https://github.com/PavanKAgnihotri) · [LinkedIn](#)
+[GitHub](https://github.com/PavanKAgnihotri) · [LinkedIn](www.linkedin.com/in/pavankeshavagnihotri)
