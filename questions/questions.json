@@ -1,0 +1,706 @@
+[
+  {
+    "id": "q_py_001",
+    "category": "Python",
+    "difficulty": -1.2,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "What is the output of: list(range(2, 10, 3))?",
+    "options": [
+      "A. [2, 5, 8]",
+      "B. [2, 4, 6, 8]",
+      "C. [2, 3, 6, 9]",
+      "D. [3, 6, 9]"
+    ],
+    "correct": "A",
+    "explanation": "range(start, stop, step) generates [2, 5, 8]. Step=3 means: 2, 2+3=5, 5+3=8, 8+3=11 (stopped, >10)."
+  },
+  {
+    "id": "q_py_003",
+    "category": "Python",
+    "difficulty": -0.5,
+    "discrimination": 1.2,
+    "guessing": 0.25,
+    "text": "What is the difference between a list and a generator in Python?",
+    "options": [
+      "A. Lists are faster; generators use less memory",
+      "B. Generators store all values; lists are lazy",
+      "C. There is no difference",
+      "D. Lists are immutable; generators are mutable"
+    ],
+    "correct": "A",
+    "explanation": "Generators are lazy \u2014 they yield one value at a time without storing all values in memory. Lists store everything upfront."
+  },
+  {
+    "id": "q_py_005",
+    "category": "Python",
+    "difficulty": 0.2,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "What is a Python decorator and what does it do?",
+    "options": [
+      "A. A design pattern that adds behavior to a function",
+      "B. A way to define class variables",
+      "C. A method for catching exceptions",
+      "D. A way to define private methods"
+    ],
+    "correct": "A",
+    "explanation": "A decorator is a function that wraps another function, adding behavior before/after without modifying the original."
+  },
+  {
+    "id": "q_py_007",
+    "category": "Python",
+    "difficulty": 0.7,
+    "discrimination": 1.4,
+    "guessing": 0.25,
+    "text": "What is the difference between deepcopy and shallow copy?",
+    "options": [
+      "A. Shallow copy copies nested objects; deepcopy does not",
+      "B. Deepcopy creates independent copy of all nested objects",
+      "C. They are identical for mutable objects",
+      "D. Deepcopy only works on lists"
+    ],
+    "correct": "B",
+    "explanation": "Shallow copy copies the outer object but nested objects still share references. deepcopy recursively copies all nested objects."
+  },
+  {
+    "id": "q_py_010",
+    "category": "Python",
+    "difficulty": 1.2,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is the difference between asyncio.gather and asyncio.wait?",
+    "options": [
+      "A. gather returns results in order; wait returns sets of futures",
+      "B. wait returns results in order; gather returns sets",
+      "C. They are identical",
+      "D. gather is synchronous; wait is asynchronous"
+    ],
+    "correct": "A",
+    "explanation": "asyncio.gather returns results in the same order as inputs. asyncio.wait returns (done, pending) sets and allows more fine-grained control like cancellation."
+  },
+  {
+    "id": "q_ml_001",
+    "category": "Classical ML",
+    "difficulty": -1.2,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "What is overfitting in machine learning?",
+    "options": [
+      "A. Model performs well on training data but poorly on new data",
+      "B. Model performs poorly on both training and test data",
+      "C. Model trains too slowly",
+      "D. Model uses too many features"
+    ],
+    "correct": "A",
+    "explanation": "Overfitting means the model memorized training data including noise. Fix: more data, regularization, dropout, cross-validation."
+  },
+  {
+    "id": "q_ml_002",
+    "category": "Classical ML",
+    "difficulty": -0.8,
+    "discrimination": 1.1,
+    "guessing": 0.25,
+    "text": "What is the difference between L1 and L2 regularization?",
+    "options": [
+      "A. L1 produces sparse models; L2 shrinks all weights",
+      "B. L2 produces sparse models; L1 shrinks all weights",
+      "C. L1 is for classification; L2 is for regression",
+      "D. They are identical in effect"
+    ],
+    "correct": "A",
+    "explanation": "L1 (Lasso) adds sum of absolute weights \u2014 drives some to exactly zero (feature selection). L2 (Ridge) adds sum of squared weights \u2014 shrinks all weights but rarely to zero."
+  },
+  {
+    "id": "q_ml_004",
+    "category": "Classical ML",
+    "difficulty": 0.2,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "How does a Random Forest differ from a single Decision Tree?",
+    "options": [
+      "A. Random Forest uses gradient boosting on one tree",
+      "B. Random Forest builds many trees on random subsets and averages",
+      "C. Random Forest only works for regression",
+      "D. Random Forest uses deeper trees than Decision Trees"
+    ],
+    "correct": "B",
+    "explanation": "Random Forest: bagging + feature randomness. Many trees trained on random bootstrap samples, random feature subsets. Final prediction is majority vote (classification) or mean (regression). Reduces variance vs single tree."
+  },
+  {
+    "id": "q_ml_006",
+    "category": "Classical ML",
+    "difficulty": 0.8,
+    "discrimination": 1.4,
+    "guessing": 0.25,
+    "text": "Why is accuracy a poor metric for imbalanced datasets?",
+    "options": [
+      "A. Accuracy is always a poor metric",
+      "B. A model predicting majority class always achieves high accuracy",
+      "C. Accuracy cannot be computed for classification",
+      "D. Accuracy requires balanced classes by definition"
+    ],
+    "correct": "B",
+    "explanation": "With 99% negative class: predicting always-negative gives 99% accuracy but 0% recall on positives. Use F1, AUC-ROC, precision-recall curve, or class-weighted metrics instead."
+  },
+  {
+    "id": "q_ml_007",
+    "category": "Classical ML",
+    "difficulty": 1.0,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is the kernel trick in SVMs?",
+    "options": [
+      "A. A method to reduce training time",
+      "B. Maps data to higher dimensions implicitly without computing coordinates",
+      "C. A regularization technique",
+      "D. A way to handle missing values"
+    ],
+    "correct": "B",
+    "explanation": "The kernel trick computes dot products in high-dimensional feature space without explicitly computing the transformation. K(x,y) = \u03c6(x)\u00b7\u03c6(y) computed directly. Enables SVM to find non-linear decision boundaries."
+  },
+  {
+    "id": "q_dl_001",
+    "category": "Deep Learning",
+    "difficulty": -1.0,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "What is the vanishing gradient problem?",
+    "options": [
+      "A. Gradients become very large during backpropagation",
+      "B. Gradients shrink to near-zero, preventing learning in early layers",
+      "C. The model forgets training data",
+      "D. Loss function reaches zero too quickly"
+    ],
+    "correct": "B",
+    "explanation": "In deep networks, gradients are multiplied through many layers during backprop. With sigmoid/tanh activations, gradients shrink exponentially. Fix: ReLU activations, batch norm, residual connections."
+  },
+  {
+    "id": "q_dl_002",
+    "category": "Deep Learning",
+    "difficulty": -0.5,
+    "discrimination": 1.2,
+    "guessing": 0.25,
+    "text": "Why does ReLU outperform sigmoid for hidden layers?",
+    "options": [
+      "A. ReLU is always between 0 and 1 like probabilities",
+      "B. ReLU avoids vanishing gradients and is computationally cheap",
+      "C. ReLU produces negative outputs for better learning",
+      "D. ReLU is differentiable everywhere"
+    ],
+    "correct": "B",
+    "explanation": "ReLU f(x) = max(0,x): gradient is 1 for x>0 (no shrinkage), 0 for x<0. Much faster than sigmoid which requires exp(). Avoids vanishing gradients in positive region."
+  },
+  {
+    "id": "q_dl_003",
+    "category": "Deep Learning",
+    "difficulty": 0.0,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "What does batch normalization do?",
+    "options": [
+      "A. Normalizes the final output layer only",
+      "B. Normalizes activations within a mini-batch, stabilizing training",
+      "C. Reduces the number of parameters",
+      "D. Applies dropout to each batch"
+    ],
+    "correct": "B",
+    "explanation": "BatchNorm normalizes layer inputs to zero mean, unit variance within each mini-batch, then scales/shifts with learned parameters. Allows higher learning rates, reduces sensitivity to initialization."
+  },
+  {
+    "id": "q_dl_005",
+    "category": "Deep Learning",
+    "difficulty": 0.8,
+    "discrimination": 1.4,
+    "guessing": 0.25,
+    "text": "What are residual connections (skip connections) in ResNet?",
+    "options": [
+      "A. Connections that skip every other layer for speed",
+      "B. Connections that add input directly to output: F(x) + x",
+      "C. Connections that multiply input by a learned weight",
+      "D. Dropout connections between residual blocks"
+    ],
+    "correct": "B",
+    "explanation": "Residual connections: output = F(x) + x. The network learns the residual F(x) = H(x) - x rather than H(x) directly. Solves vanishing gradients in very deep networks (100+ layers). Gradient flows directly through the skip connection."
+  },
+  {
+    "id": "q_dl_006",
+    "category": "Deep Learning",
+    "difficulty": 1.1,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is the difference between Adam and SGD optimizers?",
+    "options": [
+      "A. SGD uses adaptive learning rates; Adam uses fixed rates",
+      "B. Adam maintains per-parameter adaptive learning rates using momentum",
+      "C. They are identical except for batch size",
+      "D. Adam is only for classification tasks"
+    ],
+    "correct": "B",
+    "explanation": "SGD: single global learning rate, noisy updates. Adam: combines momentum (1st moment) and RMSProp (2nd moment) to compute per-parameter adaptive learning rates. Adam converges faster but SGD often generalizes better."
+  },
+  {
+    "id": "q_nlp_001",
+    "category": "NLP & Transformers",
+    "difficulty": -1.0,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "What is tokenization in NLP?",
+    "options": [
+      "A. Converting text to numerical token IDs",
+      "B. Removing stop words from text",
+      "C. Translating text between languages",
+      "D. Compressing text for storage"
+    ],
+    "correct": "A",
+    "explanation": "Tokenization splits text into tokens (words, subwords, or chars) and maps them to integer IDs. Modern LLMs use BPE or WordPiece subword tokenization to handle rare/unknown words."
+  },
+  {
+    "id": "q_nlp_002",
+    "category": "NLP & Transformers",
+    "difficulty": -0.3,
+    "discrimination": 1.2,
+    "guessing": 0.25,
+    "text": "What is the attention mechanism in transformers?",
+    "options": [
+      "A. A memory module that stores previous outputs",
+      "B. A mechanism that weighs importance of each token relative to others",
+      "C. A convolution operation over text sequences",
+      "D. A dropout layer applied to embeddings"
+    ],
+    "correct": "B",
+    "explanation": "Attention computes: Attention(Q,K,V) = softmax(QK^T/\u221adk)V. Each token attends to all others, weighted by relevance. Solves long-range dependency problem of RNNs."
+  },
+  {
+    "id": "q_nlp_003",
+    "category": "NLP & Transformers",
+    "difficulty": 0.2,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "What is the difference between BERT and GPT architectures?",
+    "options": [
+      "A. BERT is encoder-only (bidirectional); GPT is decoder-only (autoregressive)",
+      "B. GPT is encoder-only; BERT is decoder-only",
+      "C. Both are encoder-decoder architectures",
+      "D. BERT generates text; GPT understands text"
+    ],
+    "correct": "A",
+    "explanation": "BERT: encoder-only, sees full context bidirectionally, good for understanding tasks (classification, NER). GPT: decoder-only, autoregressive (left-to-right), good for generation tasks."
+  },
+  {
+    "id": "q_nlp_005",
+    "category": "NLP & Transformers",
+    "difficulty": 0.9,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is multi-head attention and why use multiple heads?",
+    "options": [
+      "A. Multiple attention layers stacked vertically",
+      "B. Runs attention in parallel subspaces to capture different relationship types",
+      "C. Attention applied to multiple documents simultaneously",
+      "D. A regularization technique for attention weights"
+    ],
+    "correct": "B",
+    "explanation": "Multi-head splits Q,K,V into h subspaces, runs attention independently, then concatenates. Each head can specialize: one for syntactic relations, one for semantic, one for coreference. Output = Concat(head1,...,headh)W_O."
+  },
+  {
+    "id": "q_nlp_006",
+    "category": "NLP & Transformers",
+    "difficulty": 1.2,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is the difference between sparse and dense attention?",
+    "options": [
+      "A. Dense attends to all tokens; sparse attends to selected subsets",
+      "B. Sparse attends to all tokens; dense attends to subsets",
+      "C. They are identical in computational complexity",
+      "D. Sparse attention is only used in vision models"
+    ],
+    "correct": "A",
+    "explanation": "Dense attention: O(n\u00b2) \u2014 every token attends to every other. Sparse attention (Longformer, BigBird): O(n log n) \u2014 attends to local window + global tokens. Enables very long contexts without quadratic memory cost."
+  },
+  {
+    "id": "q_llm_001",
+    "category": "LLMs",
+    "difficulty": -1.0,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "What is few-shot prompting?",
+    "options": [
+      "A. Training a model on a small dataset",
+      "B. Providing examples in the prompt to guide model behavior",
+      "C. Fine-tuning with a few gradient steps",
+      "D. Using a small model for inference"
+    ],
+    "correct": "B",
+    "explanation": "Few-shot: include 2-5 input/output examples in the prompt. The model learns the pattern from examples without weight updates. Zero-shot: no examples. One-shot: one example."
+  },
+  {
+    "id": "q_llm_002",
+    "category": "LLMs",
+    "difficulty": -0.5,
+    "discrimination": 1.2,
+    "guessing": 0.25,
+    "text": "What is temperature in LLM generation and what does setting it to 0 do?",
+    "options": [
+      "A. Controls model speed; 0 = fastest",
+      "B. Controls randomness; 0 = deterministic (most likely token always)",
+      "C. Controls context window size",
+      "D. Controls number of output tokens"
+    ],
+    "correct": "B",
+    "explanation": "Temperature scales logits before softmax. T=0: always picks highest probability token (deterministic). T=1: standard sampling. T>1: more random/creative. For factual tasks use T=0."
+  },
+  {
+    "id": "q_llm_003",
+    "category": "LLMs",
+    "difficulty": 0.0,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "What is RLHF and why is it used in LLM training?",
+    "options": [
+      "A. Reinforcement Learning from Human Feedback \u2014 aligns LLM to human preferences",
+      "B. Recursive Language Hierarchical Fine-tuning",
+      "C. A regularization technique for transformer training",
+      "D. A method to reduce LLM hallucinations during pretraining"
+    ],
+    "correct": "A",
+    "explanation": "RLHF: (1) supervised fine-tuning on demonstrations, (2) train reward model on human preference rankings, (3) optimize LLM with PPO against reward model. Used in ChatGPT, Claude, Llama to make models helpful and safe."
+  },
+  {
+    "id": "q_llm_005",
+    "category": "LLMs",
+    "difficulty": 0.7,
+    "discrimination": 1.4,
+    "guessing": 0.25,
+    "text": "What is the difference between fine-tuning and RAG for grounding LLMs?",
+    "options": [
+      "A. Fine-tuning updates weights with new data; RAG retrieves at inference time",
+      "B. RAG updates weights; fine-tuning retrieves at inference",
+      "C. They are identical approaches",
+      "D. Fine-tuning is only for classification tasks"
+    ],
+    "correct": "A",
+    "explanation": "Fine-tuning: bakes knowledge into weights (expensive, stale). RAG: retrieves fresh documents at query time, no retraining needed. RAG wins for: dynamic data, source attribution, lower cost. Fine-tuning wins for: style/behavior changes, task-specific format."
+  },
+  {
+    "id": "q_llm_006",
+    "category": "LLMs",
+    "difficulty": 1.0,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is LoRA and why is it used for fine-tuning LLMs?",
+    "options": [
+      "A. Low-Rank Adaptation \u2014 adds trainable low-rank matrices, reduces parameters",
+      "B. Loss-Rate Optimization Algorithm",
+      "C. A data augmentation technique for LLMs",
+      "D. A method to compress KV cache"
+    ],
+    "correct": "A",
+    "explanation": "LoRA: freezes pretrained weights, adds trainable rank-r matrices A,B where \u0394W = BA (r << d). Only trains A and B (~0.1% of params). Makes fine-tuning affordable on consumer GPUs. QLoRA adds 4-bit quantization for further efficiency."
+  },
+  {
+    "id": "q_rag_001",
+    "category": "RAG Systems",
+    "difficulty": -1.2,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "What does RAG stand for and what problem does it solve?",
+    "options": [
+      "A. Retrieval Augmented Generation \u2014 grounds LLMs in real documents",
+      "B. Recursive Agent Generation",
+      "C. Ranked Attention Grounding",
+      "D. Retrieval Aligned Generation"
+    ],
+    "correct": "A",
+    "explanation": "RAG: retrieve relevant documents at query time, inject as context, force LLM to answer from them. Solves hallucination and knowledge cutoff without expensive retraining."
+  },
+  {
+    "id": "q_rag_002",
+    "category": "RAG Systems",
+    "difficulty": -0.5,
+    "discrimination": 1.2,
+    "guessing": 0.25,
+    "text": "What is the difference between dense and sparse retrieval?",
+    "options": [
+      "A. Dense uses embeddings/vectors; sparse uses keyword matching (BM25)",
+      "B. Sparse uses embeddings; dense uses keyword matching",
+      "C. They are identical retrieval methods",
+      "D. Dense is only for images; sparse is for text"
+    ],
+    "correct": "A",
+    "explanation": "Dense: encode text as vectors, find by cosine similarity. Good for semantic matching. Sparse (BM25): score by term frequency. Good for exact keyword matching. Hybrid combines both."
+  },
+  {
+    "id": "q_rag_003",
+    "category": "RAG Systems",
+    "difficulty": 0.2,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "What does RRF (Reciprocal Rank Fusion) do in hybrid RAG?",
+    "options": [
+      "A. Merges BM25 and vector search ranked lists without tuning weights",
+      "B. Reranks documents using a neural cross-encoder",
+      "C. Compresses document embeddings",
+      "D. Filters duplicate retrieved chunks"
+    ],
+    "correct": "A",
+    "explanation": "RRF formula: score = \u03a3 1/(k + rank). Combines multiple ranked lists by rewarding documents appearing highly in multiple lists. Robust \u2014 works on ranks not raw scores, no weight tuning needed."
+  },
+  {
+    "id": "q_rag_005",
+    "category": "RAG Systems",
+    "difficulty": 0.8,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is the chunk size tradeoff in RAG document splitting?",
+    "options": [
+      "A. Larger chunks = better context but worse retrieval precision",
+      "B. Smaller chunks always outperform larger chunks",
+      "C. Chunk size has no effect on retrieval quality",
+      "D. Larger chunks = better precision but less context"
+    ],
+    "correct": "A",
+    "explanation": "Small chunks (128-256 tokens): precise retrieval, less context. Large chunks (512-1024 tokens): more context, noisier retrieval. Sweet spot: 256-512 tokens with 10-20% overlap. Parent-child chunking: retrieve small, return parent for context."
+  },
+  {
+    "id": "q_rag_006",
+    "category": "RAG Systems",
+    "difficulty": 1.0,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is RAGAS and what metrics does it measure?",
+    "options": [
+      "A. A vector database for RAG applications",
+      "B. An evaluation framework measuring faithfulness, relevance, context precision",
+      "C. A chunking library for document processing",
+      "D. A reranking model for RAG pipelines"
+    ],
+    "correct": "B",
+    "explanation": "RAGAS evaluates: Faithfulness (answer grounded in context?), Answer Relevance (answers the question?), Context Precision (relevant chunks ranked higher?), Context Recall (all relevant context retrieved?). Enables CI/CD quality gates for RAG systems."
+  },
+  {
+    "id": "q_ag_001",
+    "category": "Agents",
+    "difficulty": -1.0,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "What is the ReAct framework for AI agents?",
+    "options": [
+      "A. A React.js framework for agent UIs",
+      "B. Reasoning + Acting interleaved loop: think, act, observe, repeat",
+      "C. A retrieval-augmented context protocol",
+      "D. A multi-agent communication standard"
+    ],
+    "correct": "B",
+    "explanation": "ReAct: agent alternates Thought (reasoning) \u2192 Action (tool call) \u2192 Observation (tool result) \u2192 Thought... until goal achieved. Grounding reasoning in observations reduces hallucination."
+  },
+  {
+    "id": "q_ag_002",
+    "category": "Agents",
+    "difficulty": -0.4,
+    "discrimination": 1.2,
+    "guessing": 0.25,
+    "text": "What are the four types of agent memory?",
+    "options": [
+      "A. RAM, ROM, Cache, Disk",
+      "B. Sensory, Short-term, Long-term, External",
+      "C. Local, Global, Session, Persistent",
+      "D. In-context, Vector, SQL, Graph"
+    ],
+    "correct": "B",
+    "explanation": "Agent memory types: Sensory (immediate inputs), Short-term/In-context (current conversation window), Long-term (vector DB, retrieval across sessions), External (files, databases, APIs). LangGraph manages state across these."
+  },
+  {
+    "id": "q_ag_003",
+    "category": "Agents",
+    "difficulty": 0.2,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "What is LangGraph and how does it differ from LangChain?",
+    "options": [
+      "A. LangGraph is a graph database; LangChain is for text processing",
+      "B. LangGraph adds stateful cyclic workflows; LangChain is linear chains",
+      "C. They are identical frameworks",
+      "D. LangGraph is only for multi-agent systems"
+    ],
+    "correct": "B",
+    "explanation": "LangChain: linear sequential chains (A\u2192B\u2192C). LangGraph: directed graph with state \u2014 supports cycles, conditional branching, human-in-the-loop, parallel execution. Built on LangChain, uses StateGraph with nodes and edges."
+  },
+  {
+    "id": "q_ag_005",
+    "category": "Agents",
+    "difficulty": 0.7,
+    "discrimination": 1.4,
+    "guessing": 0.25,
+    "text": "What is the Model Context Protocol (MCP)?",
+    "options": [
+      "A. A method to compress model weights",
+      "B. Anthropic's open standard for connecting AI models to external tools/data",
+      "C. A protocol for multi-agent communication",
+      "D. A context window management technique"
+    ],
+    "correct": "B",
+    "explanation": "MCP (Anthropic, 2024): open standard that defines how AI models connect to external data sources and tools via standardized servers. Like USB-C for AI \u2014 any model can connect to any MCP server without custom integration code."
+  },
+  {
+    "id": "q_ag_007",
+    "category": "Agents",
+    "difficulty": 1.1,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is agent observability and why does it matter in production?",
+    "options": [
+      "A. Logging only the final output of an agent",
+      "B. Tracking every reasoning step, tool call, latency, and cost per agent run",
+      "C. A method to visualize agent neural networks",
+      "D. Monitoring agent memory usage only"
+    ],
+    "correct": "B",
+    "explanation": "Agent observability: trace every LLM call (input/output/latency), tool invocation (name/args/result), token costs, error rates. Tools: LangSmith, Arize Phoenix, custom JSONL logging. Without it: impossible to debug why agent made a wrong decision."
+  },
+  {
+    "id": "q_mlops_001",
+    "category": "MLOps",
+    "difficulty": -1.0,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "What is model drift and why is it a problem in production?",
+    "options": [
+      "A. When a model file becomes corrupted",
+      "B. When model performance degrades as real-world data distribution changes",
+      "C. When the model learns too fast during training",
+      "D. When the model file size increases over time"
+    ],
+    "correct": "B",
+    "explanation": "Data drift: input distribution changes (users start asking different questions). Concept drift: relationship between input and output changes. Monitor with: distribution tests, performance metrics, reference dataset comparison."
+  },
+  {
+    "id": "q_mlops_002",
+    "category": "MLOps",
+    "difficulty": -0.3,
+    "discrimination": 1.2,
+    "guessing": 0.25,
+    "text": "What is the purpose of a feature store in ML systems?",
+    "options": [
+      "A. Storing trained model weights",
+      "B. Centralized repository for computed features with consistent train/serve access",
+      "C. A database for raw training data",
+      "D. A cache for model predictions"
+    ],
+    "correct": "B",
+    "explanation": "Feature store: central platform for computing, storing, and serving ML features. Solves train-serve skew (same features in training and production), enables feature reuse across teams. Examples: Feast, Tecton, Hopsworks."
+  },
+  {
+    "id": "q_mlops_003",
+    "category": "MLOps",
+    "difficulty": 0.3,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "What is the difference between p50 and p95 latency?",
+    "options": [
+      "A. p50 = average latency; p95 = maximum latency",
+      "B. p50 = median (50% of requests faster); p95 = 95% of requests faster",
+      "C. p50 is for batch; p95 is for real-time",
+      "D. They measure different types of errors"
+    ],
+    "correct": "B",
+    "explanation": "Percentile latency: p50=median (typical experience), p95=worst 5% (tail latency), p99=worst 1%. p50 shows typical performance; p95/p99 show worst-case. SLAs usually target p95 or p99, not averages."
+  },
+  {
+    "id": "q_mlops_004",
+    "category": "MLOps",
+    "difficulty": 0.7,
+    "discrimination": 1.4,
+    "guessing": 0.25,
+    "text": "What is shadow deployment in ML model releases?",
+    "options": [
+      "A. Deploying a model without user knowledge",
+      "B. Running new model alongside production, comparing outputs without serving new model's results",
+      "C. A method to encrypt model weights",
+      "D. Deploying models to edge devices"
+    ],
+    "correct": "B",
+    "explanation": "Shadow deployment: new model receives same traffic as production model, runs in parallel, but results are NOT served to users. Compare outputs, monitor performance, validate before cutover. Lower risk than A/B testing \u2014 no user impact."
+  },
+  {
+    "id": "q_mlops_005",
+    "category": "MLOps",
+    "difficulty": 1.0,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "What is quantization in LLM deployment and what does INT8 mean?",
+    "options": [
+      "A. Reducing model layers to speed up inference",
+      "B. Representing model weights in lower precision (INT8 = 8-bit integers)",
+      "C. A training technique to reduce overfitting",
+      "D. Compressing the vocabulary size of an LLM"
+    ],
+    "correct": "B",
+    "explanation": "Quantization: reduce weight precision from FP32 (32-bit) \u2192 FP16 (16-bit) \u2192 INT8 (8-bit) \u2192 INT4 (4-bit). INT8: 4x smaller than FP32, ~2x faster, slight accuracy loss. GPTQ, AWQ, bitsandbytes are popular quantization frameworks."
+  },
+  {
+    "id": "q_sd_001",
+    "category": "System Design",
+    "difficulty": -0.8,
+    "discrimination": 1.0,
+    "guessing": 0.25,
+    "text": "How would you design a RAG system for a company's internal knowledge base?",
+    "options": [
+      "A. Single vector database, no chunking needed",
+      "B. Ingest \u2192 chunk \u2192 embed \u2192 store; query \u2192 retrieve \u2192 rerank \u2192 generate",
+      "C. Fine-tune an LLM on all company documents",
+      "D. Use keyword search only, no embeddings needed"
+    ],
+    "correct": "B",
+    "explanation": "Production RAG pipeline: (1) Ingest docs, (2) Chunk with overlap, (3) Embed with BGE/OpenAI, (4) Store in Qdrant/Pinecone, (5) At query: embed query, hybrid retrieve, rerank, (6) Generate with citation enforcement. Add observability throughout."
+  },
+  {
+    "id": "q_sd_002",
+    "category": "System Design",
+    "difficulty": 0.2,
+    "discrimination": 1.3,
+    "guessing": 0.25,
+    "text": "How would you handle LLM response caching to reduce costs?",
+    "options": [
+      "A. Cache all LLM outputs forever regardless of query",
+      "B. Semantic caching: store embeddings of past queries, return cached response for similar queries",
+      "C. Only cache responses under 100 tokens",
+      "D. Use a separate database for each user"
+    ],
+    "correct": "B",
+    "explanation": "Semantic caching (GPTCache, Redis): embed incoming query, check if similar query exists in cache (cosine similarity > threshold), return cached response. Different from exact-match caching \u2014 handles paraphrases. Can reduce LLM costs by 30-60%."
+  },
+  {
+    "id": "q_sd_003",
+    "category": "System Design",
+    "difficulty": 0.6,
+    "discrimination": 1.4,
+    "guessing": 0.25,
+    "text": "How would you design guardrails for a production LLM application?",
+    "options": [
+      "A. Only use system prompts for safety",
+      "B. Input validation + output validation + monitoring + fallback responses",
+      "C. Block all sensitive keywords in user inputs",
+      "D. Use a smaller model to check the larger model's outputs"
+    ],
+    "correct": "B",
+    "explanation": "Production guardrails: Input (PII detection, injection detection, topic classification), Output (hallucination detection, toxicity, citation verification), Monitoring (anomaly detection, rate limiting), Fallback (graceful degradation when confidence low). Tools: Guardrails AI, NeMo Guardrails, LlamaGuard."
+  },
+  {
+    "id": "q_sd_004",
+    "category": "System Design",
+    "difficulty": 1.0,
+    "discrimination": 1.5,
+    "guessing": 0.25,
+    "text": "How would you scale a multi-agent system to handle 10,000 concurrent users?",
+    "options": [
+      "A. Run all agents on a single large server",
+      "B. Stateless agents behind load balancer, persistent state in Redis/vector DB",
+      "C. One agent instance per user",
+      "D. Use a single LLM call instead of multiple agents"
+    ],
+    "correct": "B",
+    "explanation": "Scalable multi-agent: (1) Stateless agent workers (no local state), (2) State stored externally (Redis for session, Qdrant for memory), (3) Message queue (Kafka/SQS) for agent coordination, (4) Horizontal scaling via Kubernetes, (5) Circuit breakers for LLM API failures."
+  }
+]

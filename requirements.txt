@@ -1,0 +1,11 @@
+numpy
+qdrant-client
+sentence-transformers
+langchain
+langchain-community
+beautifulsoup4
+requests
+groq
+langgraph
+gradio
+python-dotenv

@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+*.ipynb_checkpoints
+data/
+data/sessions/
+data/chunks.json
+data/observability.jsonl
